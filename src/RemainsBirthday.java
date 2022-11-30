@@ -19,7 +19,7 @@ public class RemainsBirthday {
     }
     public static int  nextLeapYear(){
         int now = currentDate.getYear();
-        int nextYear = now;
+        int nextYear = now+1;
         boolean flag = false;
         while(flag != true){
 
@@ -29,7 +29,7 @@ public class RemainsBirthday {
              flag = true;
             }
             else  nextYear = nextYear+1;
-            //System.out.println(nextYear);
+            System.out.println(nextYear);
         }
        return nextYear;
     }
@@ -67,7 +67,6 @@ public class RemainsBirthday {
                 if(compareDay(birthDay)==0) year = currentDate.getYear();
                 else if (compareDay(birthDay)==-1) year = currentDate.getYear();
                 else year = nextLeapYear();
-
             }
             else year = nextLeapYear();
         }
@@ -99,7 +98,7 @@ public class RemainsBirthday {
 
     public static void main(String[] args) throws ParseException {
         //currentDate = LocalDate.now(); //-> get current by device
-        currentDate = LocalDate.of(2000,2,28); //-> mock data current day with customized data
+        currentDate = LocalDate.of(2023,2,28); //-> mock data current day with customized data
         System.out.println("nhập ngày sinh theo định dạng dd/MM: ");
         Scanner sc = new Scanner(System.in);
         String day = sc.nextLine();

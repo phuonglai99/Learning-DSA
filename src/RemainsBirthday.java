@@ -98,11 +98,12 @@ public class RemainsBirthday {
 
 
     public static void main(String[] args) throws ParseException {
-        currentDate = LocalDate.now();
+        //currentDate = LocalDate.now(); //-> get current by device
+        currentDate = LocalDate.of(2000,2,28); //-> mock data current day with customized data
         System.out.println("nhập ngày sinh theo định dạng dd/MM: ");
         Scanner sc = new Scanner(System.in);
         String day = sc.nextLine();
         //String s = "29/1";
-        System.out.println("Tính từ thời điểm hiện tại đến sinh nhật tiếp còn : "+ getNumberDay(day));
+        System.out.println("Tính từ thời điểm hiện tại đến sinh nhật tiếp còn : "+ getNumberDay(day)+" ngày");
     }
 }
